@@ -1,0 +1,16 @@
+.Modal {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Wrapper {
+    max-width: 480px;
+    width: 100%;
+    padding: 62px 24px;
+}

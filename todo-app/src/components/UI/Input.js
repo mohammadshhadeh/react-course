@@ -13,6 +13,7 @@ const Input = (props) => {
                     placeholder={props.placeholder}
                     className={styles.Input}
                     onChange={props.onChange}
+                    value={props.value}
                 />
             </div>
         </div>
