@@ -2,7 +2,6 @@ import Card from "../UI/Card";
 import styles from "./RenderUsers.module.css";
 
 const RenderUsers = (props) => {
-	console.log(props)
 	return (
 		props.usersList.length ?
 		<Card>
