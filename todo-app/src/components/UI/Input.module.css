@@ -1,0 +1,13 @@
+.Input {
+    border: 1px solid #333;
+    padding: 8px 12px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.Title {
+    margin-bottom: 8px;
+    color: #333;
+    font: 700 16px/1 'arial';
+    letter-spacing: 0.6px;
+}

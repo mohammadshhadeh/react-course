@@ -1,0 +1,16 @@
+.expense-filtered {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expense-filtered__title {
+    font-size: 18px;
+    letter-spacing: 0.8px;
+}
+
+.expense-filtered__dropdown {
+    padding: 8px 16px;
+    font-size: 18px;
+}
