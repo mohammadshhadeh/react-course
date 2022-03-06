@@ -3,15 +3,15 @@ import RenderUsers from "./components/Users/RenderUsers";
 import { useState } from 'react'
 
 const App = () => {
-  const [usersList, setUsersList] = useState([]);
+	const [usersList, setUsersList] = useState([]);
 
-  const appendNewUser = (props) =>
-    setUsersList((prevState) => [...prevState, props]);
+	const appendNewUser = (props) =>
+		setUsersList((prevState) => [...prevState, props]);
 
 	return (
 		<section>
-      <AddUsers addUsers={appendNewUser} />
-      <RenderUsers usersList={usersList} />
+			<AddUsers addUsers={appendNewUser} />
+			<RenderUsers usersList={usersList} />
 		</section>
 	);
 };

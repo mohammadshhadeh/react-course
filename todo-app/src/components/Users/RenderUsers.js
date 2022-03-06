@@ -2,15 +2,15 @@ import Card from "../UI/Card";
 import styles from "./RenderUsers.module.css";
 
 const RenderUsers = (props) => {
-    console.log(props)
+	console.log(props)
 	return (
 		props.usersList.length ?
-        <Card>
+		<Card>
 			{props.usersList.map((list) => {
 				return (
-                    <div className={styles.RenderUsers} key={`key-${list.id}`}>
-                        {list.username} ({list.age}) years old
-                    </div>
+					<div className={styles.RenderUsers} key={`key-${list.id}`}>
+						{list.username} ({list.age}) years old
+					</div>
 				);
 			})}
 		</Card> : ''
