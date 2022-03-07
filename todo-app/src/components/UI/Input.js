@@ -12,8 +12,9 @@ const Input = (props) => {
 					name={props.name}
 					placeholder={props.placeholder}
 					className={styles.Input}
-					onChange={props.onChange}
-					value={props.value}
+					// onChange={props.onChange}
+					// value={props.value}
+					ref={props.refToPass}
 				/>
 			</div>
 		</div>
