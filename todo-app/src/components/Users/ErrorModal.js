@@ -19,7 +19,6 @@ const ErrorModal = (props) => {
 				<Error props={props} />,
 				document.getElementById("modal"),
 			)}
-			;
 		</React.Fragment>
 	);
 };
