@@ -54,8 +54,8 @@ const Login = () => {
 	const { isValid: passwordIsValid } = passwordState;
 
 
-  const emailRef = useRef();
-  const passwordRef = useRef();
+	const emailRef = useRef();
+	const passwordRef = useRef();
 
 	useEffect(() => {
 		setFormIsValid(emailIsValid && passwordIsValid);
@@ -79,20 +79,20 @@ const Login = () => {
 
 	const submitHandler = (event) => {
 		event.preventDefault();
-    if (formIsValid) {
-      ctx.onLogin(emailState.value, passwordState.value);
-    } else if (!emailIsValid) {
-      emailRef.current.focus();
-    } else {
-      passwordRef.current.focus();
-    }
+		if (formIsValid) {
+			ctx.onLogin(emailState.value, passwordState.value);
+		} else if (!emailIsValid) {
+			emailRef.current.focus();
+		} else {
+			passwordRef.current.focus();
+		}
 	};
 
 	return (
 		<Card className={classes.login}>
 			<form onSubmit={submitHandler}>
 				<Input
-          ref={emailRef}
+					ref={emailRef}
 					id="email"
 					type="email"
 					isValid={emailState.isValid}
@@ -102,7 +102,7 @@ const Login = () => {
 					onBlur={validateEmailHandler}
 				/>
 				<Input
-          ref={passwordRef}
+					ref={passwordRef}
 					id="password"
 					type="password"
 					isValid={passwordState.isValid}
