@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div className="expenses">
+    <div className='expenses'>
         <NewExpense onSaveExpenseData={onSaveExpenseDataHandler} />
         <ExpenseFiltered updateExpenseFiltered={updateExpenseFiltered } />
         <ExpensesChart expenses={expenses} />

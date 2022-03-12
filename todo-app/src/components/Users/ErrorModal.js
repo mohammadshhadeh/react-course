@@ -1,6 +1,6 @@
-import Modal from "../UI/Modal";
-import React from "react";
-import ReactDOM from "react-dom";
+import Modal from '../UI/Modal';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 const Error = ({ props }) => {
 	return (
@@ -17,7 +17,7 @@ const ErrorModal = (props) => {
 		<React.Fragment>
 			{ReactDOM.createPortal(
 				<Error props={props} />,
-				document.getElementById("modal"),
+				document.getElementById('modal'),
 			)}
 		</React.Fragment>
 	);

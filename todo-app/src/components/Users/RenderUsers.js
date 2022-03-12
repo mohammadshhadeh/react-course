@@ -1,5 +1,5 @@
-import Card from "../UI/Card";
-import styles from "./RenderUsers.module.css";
+import Card from '../UI/Card';
+import styles from './RenderUsers.module.css';
 
 const RenderUsers = (props) => {
 	return (

@@ -1,6 +1,6 @@
-import Card from "../UI/Card";
-import Button from "./Button";
-import styles from "./Modal.module.css";
+import Card from '../UI/Card';
+import Button from './Button';
+import styles from './Modal.module.css';
 
 const Modal = (props) => {
 	return (

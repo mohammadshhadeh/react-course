@@ -1,5 +1,5 @@
-import AddUsers from "./components/Users/AddUsers";
-import RenderUsers from "./components/Users/RenderUsers";
+import AddUsers from './components/Users/AddUsers';
+import RenderUsers from './components/Users/RenderUsers';
 import { useState } from 'react'
 
 const App = () => {
