@@ -1,16 +1,16 @@
-import { useState, useRef } from "react";
+import { useState, useRef } from 'react';
 
-import Button from "../UI/Button";
-import Input from "../UI/Input";
-import Card from "../UI/Card";
-import ErrorModal from "./ErrorModal";
+import Button from '../UI/Button';
+import Input from '../UI/Input';
+import Card from '../UI/Card';
+import ErrorModal from './ErrorModal';
 
 const AddUsers = (props) => {
 	const nameInputRef = useRef();
 	const ageInputRef = useRef();
 
-	const [username, setUsername] = useState("");
-	const [age, setAge] = useState("");
+	const [username, setUsername] = useState('');
+	const [age, setAge] = useState('');
 	const [error, setError] = useState(null);
 
 	const usernameHandler = (event) => {
@@ -28,8 +28,8 @@ const AddUsers = (props) => {
 	const isValidInput = () => {
 		if (!nameInputRef.current.value) {
 			setError({
-				title: "Username Invalid",
-				message: "Please Enter a valid username",
+				title: 'Username Invalid',
+				message: 'Please Enter a valid username',
 			});
 
 			return true;
@@ -37,8 +37,8 @@ const AddUsers = (props) => {
 
 		if (ageInputRef.current.value < 10) {
 			setError({
-				title: "Age Invalid",
-				message: "Please Enter a valid Age number",
+				title: 'Age Invalid',
+				message: 'Please Enter a valid Age number',
 			});
 
 			return true;
@@ -73,24 +73,24 @@ const AddUsers = (props) => {
 			)}
 			<form onSubmit={addNewUserHandler}>
 				<Input
-					title="Username"
-					type="text"
-					name="username"
+					title='Username'
+					type='text'
+					name='username'
 					// value={username}
-					placeholder="Enter a username"
+					placeholder='Enter a username'
 					// onChange={usernameHandler}
 					refToPass={nameInputRef}
 				/>
 				<Input
-					title="Age (Years)"
-					type="number"
-					name="age"
+					title='Age (Years)'
+					type='number'
+					name='age'
 					// value={age}
-					placeholder="Enter an age"
+					placeholder='Enter an age'
 					// onChange={ageHandler}
 					refToPass={ageInputRef}
 				/>
-				<Button type="submit">Add User</Button>
+				<Button type='submit'>Add User</Button>
 			</form>
 		</Card>
 	);
