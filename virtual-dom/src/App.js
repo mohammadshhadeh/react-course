@@ -7,11 +7,13 @@ import Button from './components/UI/Button/Button';
 function App() {
   const [listTitle, setListTitle] = useState('My List');
 
+  // memorize setState hook
   const changeTitleHandler = useCallback(() => {
     setListTitle('New Title');
-  }, []);
+  }, [] /* dependencies => onload */ );
 
-  const listItems = useMemo(() => [5, 3, 1, 10, 9], []);
+  // memorize an object
+  const listItems = useMemo(() => [5, 3, 1, 10, 9], [] /* dependencies => onload */);
 
   return (
     <div className="app">

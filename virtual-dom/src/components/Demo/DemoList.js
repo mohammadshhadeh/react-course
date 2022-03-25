@@ -5,10 +5,12 @@ import classes from "./DemoList.module.css";
 const DemoList = (props) => {
 	const { items } = props;
 
+	  // memorize an object
 	const sortedList = useMemo(() => {
 		console.log("Items sorted");
 		return items.sort((a, b) => a - b);
-	}, [items]);
+	}, [items] /* dependencies => onchange */);
+
 	console.log("DemoList RUNNING");
 
 	return (
