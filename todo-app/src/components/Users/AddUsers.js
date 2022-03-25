@@ -6,6 +6,8 @@ import Card from '../UI/Card';
 import ErrorModal from './ErrorModal';
 
 const AddUsers = (props) => {
+	// useRef returns a mutable ref object whose .current
+	// property is initialized to the passed argument (initialValue).
 	const nameInputRef = useRef();
 	const ageInputRef = useRef();
 
