@@ -1,4 +1,5 @@
 import Card from '../UI/Card';
+// CSS Modules let you use the same CSS class name in different files without worrying about naming clashes.
 import styles from './RenderUsers.module.css';
 
 const RenderUsers = (props) => {
