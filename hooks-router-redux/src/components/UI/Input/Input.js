@@ -1,6 +1,7 @@
 import React, { useRef, useImperativeHandle } from 'react';
 import classes from './Input.module.css';
 
+// https://reactjs.org/docs/react-api.html#reactforwardref
 const Input = React.forwardRef((props, ref) => {
 	const inputRef = useRef();
 
@@ -8,6 +9,7 @@ const Input = React.forwardRef((props, ref) => {
 		inputRef.current.focus();
 	}
 
+	// useImperativeHandle(ref, createHandle, [deps])
 	useImperativeHandle(ref, () => {
 		return {
 			focus: activate

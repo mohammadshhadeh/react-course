@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-// provide and consume it
+// Context provides a way to pass data through the component
+// tree without having to pass props down manually at every level.
+// const MyContext = React.createContext(defaultValue);
 const AuthContext = React.createContext({
+	// Provider Values
 	isLoggedIn: false,
 	onLogout: () => {},
 	onLogin: (email, password) => {},
@@ -30,8 +33,8 @@ export const AuthContextProvider = (props) => {
 		<AuthContext.Provider
 			value={{
 				isLoggedIn,
-				onLogin: loginHandler,
 				onLogout: logoutHandler,
+				onLogin: loginHandler,
 			}}
 		>
 			{props.children}

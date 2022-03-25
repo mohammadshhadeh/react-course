@@ -45,6 +45,7 @@ const Login = () => {
 		value: '',
 		isValid: undefined,
 	});
+
 	const [passwordState, dispatchPassword] = useReducer(passwordReducer, {
 		value: '',
 		isValid: undefined,
