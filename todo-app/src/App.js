@@ -5,8 +5,12 @@ import { useState } from 'react'
 const App = () => {
 	const [usersList, setUsersList] = useState([]);
 
-	const appendNewUser = (props) =>
-		setUsersList((prevState) => [...prevState, props]);
+	const appendNewUser = (props) => setUsersList(
+		// the previous state value.
+		// if multiple setState calls are updating the same state,
+		// batching setState calls may lead to incorrect state being set
+		(prevState) => [...prevState, props]
+	);
 
 	return (
 		<section>
