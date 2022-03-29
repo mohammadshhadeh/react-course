@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from 'react';
 
-import MoviesList from "./components/MoviesList";
-import AddMovie from "./components/AddMovie";
+import MoviesList from './components/MoviesList';
+import AddMovie from './components/AddMovie';
 
-import "./App.css";
+import './App.css';
 
 function App() {
 	const [movies, setMovies] = useState([]);
@@ -29,7 +29,7 @@ function App() {
 		setIsLoading(true);
 		setError(false);
 		fetch(
-			"https://practicing-project-c4c3a-default-rtdb.firebaseio.com/movies.json",
+			'https://practicing-project-c4c3a-default-rtdb.firebaseio.com/movies.json',
 		)
 			.then((res) => res.json())
 			.then((data) => {
@@ -37,15 +37,15 @@ function App() {
 
 				for (const key in data) {
 					loadedMovies.push({
-            id: key,
-            title: data[key].title,
-            openingText: data[key].title,
-            releaseDate: data[key].releaseDate,
-          });
+						id: key,
+						title: data[key].title,
+						openingText: data[key].title,
+						releaseDate: data[key].releaseDate,
+					});
 				}
 				setMovies(() => loadedMovies);
 				setIsLoading(false);
-        return loadedMovies;
+				return loadedMovies;
 			})
 			.catch(() => {
 				setError(true);
@@ -55,17 +55,17 @@ function App() {
 
 	const addMoviesHandler = async (movie) => {
 		const results = await fetch(
-			"https://practicing-project-c4c3a-default-rtdb.firebaseio.com/movies.json",
+			'https://practicing-project-c4c3a-default-rtdb.firebaseio.com/movies.json',
 			{
-				method: "POST",
+				method: 'POST',
 				headers: {
-					"Content-Type": "application/json",
+					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify(movie),
 			},
 		);
 		const data = await results.json();
-		console.log("data: ", data);
+		console.log('data: ', data);
 	};
 
 	useEffect(() => {
