@@ -1,0 +1,19 @@
+:root {
+	--blue: #1e90ff;
+	--white: #fff;
+	--gray: #ddd;
+	--danger: tomato;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif arial;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}

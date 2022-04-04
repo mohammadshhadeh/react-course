@@ -1,0 +1,21 @@
+.form {
+	display: flex;
+	margin-bottom: 42px;
+}
+
+.input {
+	border: 1px solid var(--gray);
+	flex-grow: 2;
+	margin-right: 16px;
+	padding: 6px 16px;
+}
+
+.submit {
+	background-color: var(--blue);
+	border: none;
+	color: var(--white);
+	cursor: pointer;
+	flex-grow: 1;
+	padding: 0 16px;
+	text-align: center;
+}

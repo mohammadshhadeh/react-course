@@ -1,0 +1,43 @@
+.card {
+	border-left: 1px solid var(--gray);
+	border-right: 1px solid var(--gray);
+}
+
+.card-title {
+	border-bottom: 1px solid var(--gray);
+	border-top: 1px solid var(--gray);
+	font-size: 24px;
+	margin: 0;
+	padding: 16px;
+}
+
+.list-details,
+.list {
+	align-items: center;
+	display: flex;
+}
+
+.list {
+	border-bottom: 1px solid var(--gray);
+	padding: 8px 16px;
+}
+
+.list-details {
+	width: calc(100% - 50px);
+}
+
+.list-text {
+	margin-left: 16px;
+}
+
+.list-text.deleted {
+	text-decoration: line-through;
+	text-decoration-color: var(--danger);
+}
+
+.delete {
+	background-color: var(--danger);
+	border: none;
+	color: var(--white);
+	padding: 4px 16px;
+}
