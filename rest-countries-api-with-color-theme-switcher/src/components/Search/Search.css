@@ -1,0 +1,13 @@
+.search {
+	border-radius: 6px;
+	max-width: 100%;
+	padding: 12px 24px;
+	width: calc(100% - 24px);
+}
+
+@media all and (min-width: 768px) {
+	.search {
+		max-width: 460px;
+		width: 50%;
+	}
+}

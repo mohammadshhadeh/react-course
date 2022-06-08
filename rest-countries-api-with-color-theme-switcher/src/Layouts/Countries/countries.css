@@ -1,0 +1,10 @@
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 64px 48px;
+    margin-top: 48px;
+}
+
+.grid-item {
+    cursor: pointer;
+}
