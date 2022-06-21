@@ -1,0 +1,42 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Plain Chicken",
+      "servings": 3,
+      "cookTime": "1:45",
+      "instructions": "1. Put salt on chicken\\n 2. Put chicken on oven",
+      "ingredients": [
+        {
+          "id": 1,
+          "name": "Chicken",
+          "amount": "1"
+        },
+        {
+          "id": 2,
+          "name": "Salt",
+          "amount": "1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Plain Pork",
+      "servings": 5,
+      "cookTime": "1:00",
+      "instructions": "1. Put salt on Pork\\n 2. Put Pork on oven",
+      "ingredients": [
+        {
+          "id": 1,
+          "name": "Chicken",
+          "amount": "1"
+        },
+        {
+          "id": 2,
+          "name": "Salt",
+          "amount": "1"
+        }
+      ]
+    }
+  ]
+}
