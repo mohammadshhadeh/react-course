@@ -1,38 +1,19 @@
-import { createStore } from 'redux';
+// import { createStore } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
+import counterSlice from './counter';
+import authSlice from './auth';
 
-import { createSlice, configureStore } from '@reduxjs/toolkit';
+// const INCREMENT = 'INCREMENT';
+// const DECREMENT = 'DECREMENT';
+// const TOGGLE = 'TOGGLE';
 
-const INCREMENT = 'INCREMENT';
-const DECREMENT = 'DECREMENT';
-const TOGGLE = 'TOGGLE';
+// const TYPES = {
+// 	[INCREMENT]: INCREMENT,
+// 	[DECREMENT]: DECREMENT,
+// 	[TOGGLE]: TOGGLE,
+// };
 
-const TYPES = {
-	[INCREMENT]: INCREMENT,
-	[DECREMENT]: DECREMENT,
-	[TOGGLE]: TOGGLE,
-};
-
-const initialState = {
-	counter: 0, isShow: true
-}
-
-const counterSlice = createSlice({
-	name: 'counter',
-	initialState,
-	reducers: {
-		increment(state, action) {
-			state.counter += (action.payload || 1);
-		},
-		decrement(state) {
-			state.counter--;
-		},
-		toggle(state) {
-			state.isShow = !state.isShow
-		},
-	}
-})
-
-// const counterReducer = (state = { counter: 0, isShow: true }, action) => {
+// const counterReducer = (state = { counter: 0, showCounter: true }, action) => {
 // 	switch (action.type) {
 // 		case TYPES.INCREMENT:
 // 			return {
@@ -47,7 +28,7 @@ const counterSlice = createSlice({
 // 		case TYPES.TOGGLE:
 // 			return {
 // 				...state,
-// 				isShow: !state.isShow,
+// 				showCounter: !state.showCounter,
 // 			};
 // 		default:
 // 			return state;
@@ -56,16 +37,11 @@ const counterSlice = createSlice({
 
 // const store = createStore(counterReducer);
 
-
-// counterSlice.actions.toggle;
-
-
-
 const store = configureStore({
-	reducer: counterSlice.reducer
+	reducer: {
+		counter: counterSlice.reducer,
+		auth: authSlice.reducer,
+	},
 });
-
-
-export const counterActions = counterSlice.actions;
 
 export default store;
